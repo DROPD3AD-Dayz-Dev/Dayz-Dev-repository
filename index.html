@@ -1,100 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <title>My GitHub Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .bg-container {
+            background-image: url('https://example.com/path/to/your/background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            height: 100vh;
+            z-index: -1;
+        }
+        header {
+            background-color: rgba(51, 51, 51, 0.8);
+            color: white;
+            text-align: center;
+            padding: 1em;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: calc(100vh - 160px);
+        }
+        .project-buttons {
+            display: grid;
+            gap: 20px;
+            width: 100%;
+            max-width: 800px;
+            margin-top: 40px;
+        }
+        .project-button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .project-button:hover {
+            background-color: #555;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-container"></div>
+    <header>
+        <h1>Welcome to My GitHub Page</h1>
+    </header>
 
-    <title>Basic Company Template for Bootstrap 3</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-
-    <!-- Custom CSS for the 'One Page Wonder' Template -->
-    <link href="css/one-page-wonder.css" rel="stylesheet">
-  </head>
-
-  <body>
-
-    <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="index.php">Start Bootstrap</a>
+    <main>
+        <h2>Main Projects Area</h2>
+        <div class="project-buttons">
+            <button class="project-button">View Project 1</button>
+            <button class="project-button">View Project 2</button>
+            <button class="project-button">View Project 3</button>
         </div>
+    </main>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse navbar-ex1-collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container -->
-    </nav>
-
-    <div class="header-image">
-
-      <div class="headline">
-        <div class="container">
-          <h1>One Page Wonder</h1>
-          <h2>Will Knock Your Socks Off</h2>
-        </div>
-      </div>
-
-    </div><!-- /header-image -->
-
-    <div class="container">
-
-      <!-- START THE FEATURETTES -->
-
-      <hr class="featurette-divider">
-
-      <div class="featurette" id="about">
-        <img class="featurette-image img-circle img-responsive pull-right" src="http://placehold.it/500x500">
-        <h2 class="featurette-heading">This First Heading <span class="text-muted">Will Catch Your Eye</span></h2>
-        <p class="lead">RANDOM Content To Fill This Test Repo.</p>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="featurette" id="services">
-        <img class="featurette-image img-circle img-responsive pull-left" src="http://placecreature.com/500/500">
-        <h2 class="featurette-heading">The Second Heading <span class="text-muted">Is Pretty Cool Too.</span></h2>
-        <p class="lead">RANDOM Content To Fill This Test Repo</p>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="featurette" id="contact">
-        <img class="featurette-image img-circle img-responsive pull-right" src="http://placecreature.com/500/500">
-        <h2 class="featurette-heading">The Third Heading <span class="text-muted">Will Seal the Deal.</span></h2>
-        <p class="lead">RANDOM Content To Fill This Test Repo.</p>
-      </div>
-
-      <!-- /END THE FEATURETTES -->
-
-      <hr>
-
-      <!-- FOOTER -->
-      <footer>
-        <p>Copyright &copy; Company 2013</p>
-      </footer>
-      <!-- /END OF FOOTER -->
-
-    </div><!-- /container -->
-
-    <!-- JavaScript -->
-    <script src="js/jquery-1.10.2.js"></script>
-    <script src="js/bootstrap.js"></script>
-
-  </body>
-
+    <footer>
+        <p>&copy; 2024 My GitHub Page. All rights reserved.</p>
+    </footer>
+</body>
 </html>
