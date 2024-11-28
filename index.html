@@ -3,89 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DROPD3AD Dayz Dev</title>
+    <title>DayZ Modding Projects</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f0f0f0;
+        /* ... (previous styles remain unchanged) ... */
+
+        .widget-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 200px;
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
             display: flex;
             flex-direction: column;
-            min-height: 100vh;
-        }
-        .bg-container {
-            background-image: url('https://cdn.discordapp.com/attachments/1220635415405531198/1220769177757941780/DD.png?ex=66d68ea4&is=66d53d24&hm=0da1bc110982e069fda28f57c82a81c1f14cad2a89dd47f9d8b1c0c13cf3e1f5&');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            height: 100vh;
-            z-index: -1;
-        }
-        header {
-            background-color: rgba(51, 51, 51, 0.8);
-            color: white;
-            text-align: center;
-            padding: 1em;
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
-        main {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
             justify-content: center;
-            height: calc(100vh - 160px);
+            align-items: center;
+            z-index: 9999;
         }
-        .project-buttons {
-            display: grid;
-            gap: 20px;
-            width: 100%;
-            max-width: 800px;
-            margin-top: 40px;
+
+        .widget-header {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 10px;
+            border-top-left-radius: 18px;
+            border-top-right-radius: 18px;
         }
-        .project-button {
-            background-color: #333;
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            cursor: pointer;
+
+        .widget-body {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .player-count {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ffffff;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .player-count span {
+            font-size: 16px;
+            color: #cccccc;
+        }
+
+        .steam-charts-link {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .steam-charts-link a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: rgba(255, 255, 255, 0.15);
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 10px;
             transition: background-color 0.3s ease;
         }
-        .project-button:hover {
-            background-color: #555;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1em;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            z-index: 10;
+
+        .steam-charts-link a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
         }
     </style>
 </head>
 <body>
-    <div class="bg-container"></div>
-    <header>
-        <h1>Welcome to My GitHub Page</h1>
-    </header>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="project1.html">Project 1</a></li>
+                <li><a href="project2.html">Project 2</a></li>
+                <li><a href="project3.html">Project 3</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
 
-    <main>
-        <h2>Main Projects Area</h2>
-        <div class="project-buttons">
-            <button class="project-button">View Project 1</button>
-            <button class="project-button">View Project 2</button>
-            <button class="project-button">View Project 3</button>
+        <h1>DayZ Modding Projects</h1>
+        <p>Welcome to our collection of DayZ modding projects!</p>
+
+        <!-- Main content goes here -->
+
+        <div class="widget-container">
+            <div class="widget-header">
+                <h3>Current Players in DayZ</h3>
+            </div>
+            <div class="widget-body">
+                <div class="player-count">
+                    <span>Players:</span> <strong id="current-player-count">Loading...</strong>
+                </div>
+                <div class="steam-charts-link">
+                    <a href="https://steamcharts.com/app/221410" target="_blank">View on Steam Charts</a>
+                </div>
+            </div>
         </div>
-    </main>
 
-    <footer>
-        <p>&copy; 2024 My GitHub Page. All rights reserved.</p>
-    </footer>
+        <div class="social-links">
+            <div class="social-link"><a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a></div>
+            <div class="social-link"><a href="https://discord.gg" target="_blank"><i class="fab fa-discord"></i></a></div>
+        </div>
+    </div>
+
+    <script>
+        // ... (JavaScript remains unchanged) ...
+    </script>
 </body>
 </html>
