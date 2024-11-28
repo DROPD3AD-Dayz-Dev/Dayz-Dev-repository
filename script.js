@@ -1,11 +1,16 @@
 // ... (dropd3ad) ...
+// Function to update player count
+function updatePlayerCount(count) {
+    const playerCountElement = document.getElementById('current-player-count');
+    playerCountElement.textContent = `Players: ${count}`;
+}
 
-document.addEventListener('DOMContentLoaded', () => {
-    fetch('https://api.dayzmoddinghub.com/v1/mods')
-        .then(response => response.json())
-        .then(data => {
-            const playerCountElement = document.getElementById('current-player-count');
-            playerCountElement.textContent = `Players: ${data.current_players}`;
-        })
-        .catch(error => console.error('Error fetching data:', error));
-});
+// Simulated player count update (remove or comment out the fetch call)
+setTimeout(() => {
+    updatePlayerCount(100);
+}, 3000); // Simulate API delay
+
+// Function to handle Steam Charts link click
+function handleSteamChartsClick() {
+    window.open('https://steamcharts.com/app/221410', '_blank');
+}
